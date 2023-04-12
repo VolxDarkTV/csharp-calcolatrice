@@ -132,55 +132,104 @@ namespace csharp_calcolatrice
 
 
         }
-        public static double ElevateNum(double n1, double n2)
+        //public static double ElevateNum(double n1, double n2)
+        //{
+        //    if((n1 > 0 && n2 > 0) || (n1 < 0 && n2 > 0))
+        //    {   
+        //        if(n2 > 1)
+        //        {
+        //            double result = n1;
+        //            for (double i = 1; i < n2; i++)
+        //            {
+        //                result *= n1;
+        //            }
+        //            return result;
+        //        }
+        //        else 
+        //        { 
+        //            return n1; 
+        //        }
+        //    }
+        //    else if((n1 < 0 && n2 < 0) || (n1 > 0 && n2 < 0))
+        //    {
+        //        if (n2 < 0)
+        //        {
+        //            double result = 1 / n1;
+
+        //            for (double i = -1; i > n2; i--)
+        //            {
+        //                result *= 1 / n1;
+        //            }
+        //            return result;
+        //        }
+        //        else if(n2 < 0)
+        //        {
+        //            double result = 1 / n1;
+
+        //            for (double i = -1; i > n2; i--)
+        //            {
+        //                result *= 1 / n1;
+        //            }
+        //            return - result;
+        //        }
+        //        else
+        //        {
+        //            return n1;
+        //        }
+        //    }
+        //    else if (n1 == 0 && n2 == 0)
+        //    {
+        //        return 1;
+        //    }
+        //    else
+        //    {
+        //        return 0;
+        //    }
+        //}
+
+        public static double ElevateNum(double b, double e)
         {
-            if((n1 > 0 && n2 > 0) || (n1 < 0 && n2 > 0))
-            {   
-                if(n2 > 1)
-                {
-                    double result = n1;
-                    for (double i = 1; i < n2; i++)
-                    {
-                        result *= n1;
-                        
-                    }
-                    return result;
-                }
-                else 
-                { 
-                    return n1; 
-                }
-            }
-            else if(n1 < 0 || n2 < 0)
-            {
-                if (n2 < 0 && n1 > 0)
-                {
-                    double result = 1 / n1;
-
-                    for (double i = -1; i > n2; i--)
-                    {
-                        result *= 1 / n1;
-                    }
-                    return result;
-                }
-                else if(n2 < 0 && n1 < 0)
-                {
-                    double result = 1 / n1;
-
-                    for (double i = -1; i > n2; i--)
-                    {
-                        result *= 1 / n1;
-                    }
-                    return - result;
-                }
-                else
-                {
-                    return n1;
-                }
-            }
-            else if (n1 == 0 && n2 == 0)
+            if (b == 0 && e == 0)
             {
                 return 1;
+            }
+            else if (b < 0 && e > 0)
+            {
+                double result = -b;
+                for (double i = 1; i < e; i++)
+                {
+                    result *= b;
+                }
+                return result;
+            }
+            else if (e < 0 && b > 0)
+            {
+                double result = 1 / b;
+
+                for (double i = -1; i > e; i--)
+                {
+                    result *= 1 / b;
+                }
+                return result;
+            }
+            else if(b < 0 && e < 0)
+            {
+                double result = - 1 / b;
+
+                for (double i = -1; i > e; i--)
+                {
+                    result *= 1 / b;
+                }
+                return result;
+            }
+            else if(b > 0 && e > 0)
+            {
+                double result = b;
+                for (double i = 1; i < e; i++)
+                {
+                    result *= b;
+                }
+                return result;
             }
             else
             {
@@ -188,6 +237,5 @@ namespace csharp_calcolatrice
             }
         }
 
-        
     }
 }
