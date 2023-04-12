@@ -129,6 +129,36 @@ namespace csharp_calcolatrice
             {
                 return n1;
             }
+
+
+        }
+        public static int ElevateNum(int n1, int n2)
+        {
+            if(n1 > 0 && n2 > 0)
+            {   
+                if(n2 > 1)
+                {
+                    int result = n1;
+                    for (int i = 1; i < n2; i++)
+                    {
+                        result *= n1;
+                        
+                    }
+                    return result;
+                }
+                else 
+                { 
+                    return n1; 
+                }
+            }
+            else if(n1 == 0 && n2 == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
     }
