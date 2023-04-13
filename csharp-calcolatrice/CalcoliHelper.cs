@@ -237,5 +237,24 @@ namespace csharp_calcolatrice
             }
         }
 
+        //public static double ElevateNum(int b, int e)
+        //{
+        //    if(b == 0 && e == 0)
+        //    {
+        //        return 1;
+        //    }
+        //    double result = 1;
+        //    double b2 = (double)b;
+        //    if(e<0)
+        //    {
+        //        b2 = 1.0 / b2;
+        //    }
+        //    for(int i = 0; i < AssoluteNum(e); i++)
+        //    {
+        //        result *= b2;
+        //    }
+        //    return result;
+        //}
+
     }
 }

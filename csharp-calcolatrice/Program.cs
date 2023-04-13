@@ -34,7 +34,7 @@
             //Max Double
             Console.WriteLine($"Max Double = {CalcoliHelper.MaxNum(2.7, 6.9)}");
 
-            Console.WriteLine(CalcoliHelper.ElevateNum(-5,2));
+            Console.WriteLine(CalcoliHelper.ElevateNum(-5,-2));
 
             
 
